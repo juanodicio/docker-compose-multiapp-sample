@@ -1,0 +1,5 @@
+fastapi==0.63.0
+uvicorn==0.13.4
+SQLAlchemy==1.4.2
+pg8000==1.18.0
+alembic==1.5.7

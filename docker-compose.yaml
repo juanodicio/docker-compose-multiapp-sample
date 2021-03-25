@@ -1,0 +1,25 @@
+version: "3.6"
+services:
+  store-api:
+    build: ./src/store-api
+    networks:
+      - store-network
+
+  store-front:
+    build: ./src/store-font
+    networks:
+      - store-network
+
+  local-pg:
+    image: postgres:12-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: app_pass
+      POSTGRES_USER: app_user
+      POSTGRES_DB: mystore
+    networks:
+      - store-network
+
+networks:
+  store-network:
