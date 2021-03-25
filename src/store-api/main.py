@@ -1,19 +1,6 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
-
-
-class Product(BaseModel):
-    name: str
-    description: str
-    price: float
-    image_url: str
-
-
-products = [
-    Product(name="Hyperx Alloy Origins Core", description="", price=385, image_url=""),
-    Product(name="Razer huntsman mini", description="", price=385, image_url=""),
-    Product(name="Keychron K6", description="", price=385, image_url="")
-]
+from fastapi_sqlalchemy import DBSessionMiddleware
+from fastapi_sqlalchemy import db
 
 
 app = FastAPI()

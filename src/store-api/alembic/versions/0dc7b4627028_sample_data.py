@@ -1,16 +1,17 @@
-"""Add sample data
+"""sample data
 
-Revision ID: 1f1953f36984
-Revises: a209497c4275
-Create Date: 2021-03-25 06:21:07.145399
+Revision ID: 0dc7b4627028
+Revises: 28a8dccff2b0
+Create Date: 2021-03-25 09:06:46.019092
 
 """
 from alembic import op
 import sqlalchemy as sa
 
+
 # revision identifiers, used by Alembic.
-revision = '1f1953f36984'
-down_revision = 'a209497c4275'
+revision = '0dc7b4627028'
+down_revision = '28a8dccff2b0'
 branch_labels = None
 depends_on = None
 
