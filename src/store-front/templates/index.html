@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>My Little Store</title>
+</head>
+<body>
+    <h1>My Little Store</h1>
+
+    <h2>Products</h2>
+    <ul>
+        {% for prod in products %}
+        <li>{{ prod.name }} - S/{{ prod.price }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

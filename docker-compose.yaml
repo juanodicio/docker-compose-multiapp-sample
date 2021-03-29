@@ -10,7 +10,11 @@ services:
       APP_ENV: "docker"
 
   store-front:
-    build: ./src/store-font
+    build: ./src/store-front
+    ports:
+      - 8000:8000
+    environment:
+      APP_ENV: "docker"
     networks:
       - store-network
 
