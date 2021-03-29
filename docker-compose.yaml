@@ -4,6 +4,10 @@ services:
     build: ./src/store-api
     networks:
       - store-network
+    ports:
+    - 5000:5000
+    environment:
+      APP_ENV: "docker"
 
   store-front:
     build: ./src/store-font

@@ -9,8 +9,12 @@ from alembic import context
 import os, sys
 from dotenv import load_dotenv
 
+env_file = '.env'
+if os.environ.get("APP_ENV"):
+    env_file = '.env.' + os.environ['APP_ENV']
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-load_dotenv(os.path.join(BASE_DIR, ".env"))
+load_dotenv(os.path.join(BASE_DIR, env_file))
 sys.path.append(BASE_DIR)
 # -----------------------------------------------------------#
 
@@ -35,7 +39,7 @@ fileConfig(config.config_file_name)
 
 
 # ---------------- added code here -------------------------#
-from app import models
+from store import models
 
 target_metadata = models.Base.metadata
 
