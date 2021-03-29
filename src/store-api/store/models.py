@@ -1,8 +1,5 @@
-from sqlalchemy.ext.declarative import declarative_base
+from .database import Base
 import sqlalchemy as sa
-
-
-Base = declarative_base()
 
 
 class Product(Base):
